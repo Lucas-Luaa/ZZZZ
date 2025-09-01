@@ -1,5 +1,6 @@
 
--- Made By Lucas
+
+-- Made By Lucas2
 
 -------- <<<<< Header >>>>> --------
 
@@ -492,16 +493,9 @@ FunctionTask['EnableFarm'] = function()
                 local target
                 for _, v in ipairs(workspace.Camera:GetChildren()) do
                     if v:IsA("BasePart") and v.Name == "Part" then
-                        target = v
-                        break
-                    end
-                end
-
-                if target then
-                    repeat
                         Component.hit()
-                        hrp.CFrame = target.CFrame * Component.methods()
-                    until not target.Parent
+                        hrp.CFrame = v.CFrame * Component.methods()
+                    end
                 end
 
             else
